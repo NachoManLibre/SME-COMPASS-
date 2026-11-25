@@ -1,0 +1,250 @@
+  
+            body
+            {
+                background-color: rgb(253, 249, 249);
+                background-image: url("skyview.jpg.jpeg");
+                background-position:top;
+                padding: px;    /* Space inside */
+                margin: 0px;     /* Space outside */
+
+
+            }
+
+            nav 
+            {
+                grid-area: menu;
+            }
+
+            nav a:hover 
+            {
+                background:#fff;
+                color: yellow;
+            }
+
+                nav ul
+            {
+                list-style: none;
+                display:flex;
+                flex-wrap:wrap;
+                justify-content: flex-end;
+                gap: 8px;
+            }
+
+
+
+            html, body 
+            {
+                height:100%;
+                margin :0px;
+            }
+            .greetings
+            {
+                color:rgb(255, 255, 255);
+            }
+
+            #OpeningText1
+            {
+                color:rgb(255, 255, 255);
+                font-style: normal;
+                font-size: 35px;
+                margin-left:25px;
+            }
+            
+            #OpeningSection1
+            {
+                background-color:rgb(29, 29, 29);
+                width:100%;
+                padding:2px;
+                box-sizing:border-box;
+            }
+
+            #topmenuoption a
+            {
+                font-size: 20px;
+                padding: 6px;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                margin-left:20px;
+            }
+
+            #topmenuoption
+            {
+                border: 2px solid rgb(75, 74, 74); /* The border line */
+                background-color: rgb(199, 197, 193);
+                padding:8px;
+            }
+
+            #menumessage
+            {
+                margin-left:20px;
+                margin-bottom:-10px;
+            }
+
+            #SMECompassmenulogo
+            {
+                font-size:40px;
+            }
+
+            #pageInfo
+            {
+                font-size:400px;
+            }
+
+            #afterLogo
+            {
+                font-size:large;
+                color:white;
+                text-decoration: none;
+            }
+
+            .header-stick
+            {
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .sidebar
+            {
+                width:149px;
+                background-color: rgb(225, 222, 222);
+                padding:0px;
+                box-sizing: border-box;
+                border-right: 2px solid black;
+                margin:px;
+            }
+
+            .sidebar a
+            {
+                font-size:13.5px;
+                text-decoration: none;
+                color:rgb(18, 17, 17);
+                display:block;
+                border-radius: 10px;
+                padding: 2px 8px;
+                margin-top:3px;
+                margin-left:3px;
+            }
+
+            .dashboard-border
+            {
+                display:flex;
+                min-height: 100vh;
+            }
+
+            .mainsection1
+            {
+                margin:20px 30px;
+                background-color: rgb(218, 214, 214);
+                padding:20px;
+                flex:1;
+            }
+
+            .section1
+            {
+                margin:20px 30px;
+                background-color: rgb(255, 249, 249);
+                border-radius: 20px;
+                padding:20px;
+                flex:1;
+            }
+
+            #loginHeading
+            {
+                text-align: center;
+                font-size: bigger;
+                font-weight:100;
+                text-align: center;
+            }
+
+            #loginInfo
+            {
+                color:rgb(47, 47, 47);
+                font-size: smaller;
+                font-weight:10;
+                font-style: normal;
+                text-align: center;
+            }
+
+
+
+            .formGroup input
+            {
+                width:100%;
+                padding:10px;
+                font-size:15px;
+                box-sizing: border-box;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+
+            .topMenuButtons1
+            {
+                display: inline-block;
+                text-decoration: none;
+                color: rgb(230, 227, 227);
+                background:rgb(18, 16, 16);
+                padding:6px;
+                font-weight: 100;
+                border-radius: 10px;
+                transition: all 0.2s ease;
+            }
+
+            #welcomeBar
+            {
+                background-color: rgb(30, 30, 30);
+                border-radius:20px;
+                padding:32px;
+            }
+
+            #welcomeBar div
+            {
+                font-weight: 10;
+                font-size:28px;
+                color:rgb(242, 232, 232);
+            }
+
+            #welcomeBar p
+            {
+                color:rgb(180, 176, 176);
+                font-size:20px;
+            }
+
+            .loginOptions
+            {
+                margin-top: 30px;
+            }
+
+            .loginOptions a
+            {
+                color:black;
+                background-color: rgb(196, 194, 194);
+                text-decoration: none;
+                padding:6px;
+                border-radius: 10px;
+                margin-right:10px;
+                margin-left:10px;
+            }
+
+            .loginOptions a:hover
+            {
+                background-color: grey;
+                transition: all 0.2s;
+            }
+
+            .formGroup button
+            {
+                display:block;
+                margin-bottom: 10px;
+                padding:6px 10px;
+                
+                border-radius: 10px;
+                color:rgb(64, 63, 63);
+                box-sizing: border-box;
+                width:40%;
+            }
+
+            .formGroup button:hover
+            {
+                background-color: grey;
+                transition: all 0.2s;
+            }

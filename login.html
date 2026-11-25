@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width" intial-scale = 1.0>
+    <link rel="stylesheet" href = "styling.css">
+</head>
+<title id = webtitle1> SMECompass | Log In  </title>
+
+<!-- /* css area */ -->
+
+<style>
+
+</style>
+
+<header id = "OpeningSection1"> 
+    <div class="header-stick">
+    <h1 bold id = OpeningText1>
+        SMECompass 
+    </h1>
+    <span id = "afterLogo">
+         <a href="login.html" > Log In  
+         </a>
+</span>
+</div>  
+</header>
+
+<nav id="topmenuoption">
+    <div>
+        <h3>
+            <p id = "menumessage">
+                > Log In
+                <a class = "topMenuButtons1" href="index.html"> Go back </a>
+            </p>
+        </h3>
+        <h3>
+            <a class = "topMenuButtons1" href="getinfo.html"> Get Info </a>
+            <a class = "topMenuButtons1" href="updateNews.html"> Updates </a>
+            <a class = "topMenuButtons1" href="errorReport.html"> Report an error </a>
+            <a class = "topMenuButtons1" href="devCredits.html"> Credits </a>
+            <a class = "topMenuButtons1" href="options.html"> Options </a>
+
+        </h3>
+    </div>
+</nav>
+
+
+<div class = "dashboard-border">
+    <aside class="sidebar">
+        <nav>
+        <ul>
+            <li> <a class = "sidebarButtons1" href="login.html"> Dashboard </a></li>
+            <li> <a class = "sidebarButtons1" href="login.html"> Business Profile </a></li>
+            <li><a class = "sidebarButtons1" href="login.html"> Assessment </a></li>
+            <li><a class = "sidebarButtons1" href="login.html"> Recommendation </a></li>
+            <li> <a class = "sidebarButtons1" href="login.html"> Archive </a></li>
+        </ul>
+    </nav>
+    </aside>
+<main class = mainsection1>
+    <div class = section1>
+        <h1>
+            <p id = "loginHeading">
+                Sign In
+            </p>
+        </h1>
+        <h2>
+            <p id = "loginInfo">
+                Sign in to continue your digitalisation journey.
+            </p>
+        </h2>
+    </div>
+    <div class = section1>
+        <form method = "post" onsubmit="handleLogin(event)">
+
+            <p class = "formGroup">
+                <label for ="username">Username/Email : </label> <br>
+                <input type ="text" id = "username" name = "username" required>
+            </p>
+
+            <p class = "formGroup">
+                <label for ="password">Password : </label> <br>
+                <input type ="text" id = "password" name = "password" required>
+            </p>
+
+            <p class = "formGroup">
+                <button type ="submit" class="btn" > Log In </button>
+                <button type ="reset" class="btn" > Reset </button>
+            </p>
+
+            <p class = "loginOptions">
+                <a href="signUp.html"> Don't have an account? Create a new account </a>
+                <a href="help.html"> Forgot Password </a>
+            </p>
+
+<script>
+        function handleLogin(event) {
+            event.preventDefault();
+
+            const usernameInput = document.getElementById('username').value.trim();
+            const passwordInput = document.getElementById('password').value;
+
+            if (!usernameInput || !passwordInput) {
+                alert('Please enter both your username/email and password.');
+                return;
+            }
+
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('currentUser', usernameInput);
+
+            alert('Login successful! Redirecting to your dashboard...');
+            window.location.href = 'login.html';
+        }
+    </script>
+
+        </form>
+
+    </div>
+    </div>
+</main>
+
+

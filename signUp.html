@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width" intial-scale = 1.0>
+    <link rel="stylesheet" href = "styling.css">
+</head>
+<title id = webtitle1> SMECompass | Log In  </title>
+
+<!-- /* css area */ -->
+
+<style>
+
+</style>
+
+<header id = "OpeningSection1"> 
+    <div class="header-stick">
+    <h1 bold id = OpeningText1>
+        SMECompass 
+    </h1>
+    <span id = "afterLogo">
+         <a href="login.html" > Log In  
+         </a>
+</span>
+</div>  
+</header>
+
+<nav id="topmenuoption">
+    <div>
+        <h3>
+            <p id = "menumessage">
+                >  Log In
+                <a class = "topMenuButtons1" href="index.html"> Go back </a>
+            </p>
+        </h3>
+        <h3>
+            <a class = "topMenuButtons1" href="getinfo.html"> Get Info </a>
+            <a class = "topMenuButtons1" href="updateNews.html"> Updates </a>
+            <a class = "topMenuButtons1" href="errorReport.html"> Report an error </a>
+            <a class = "topMenuButtons1" href="devCredits.html"> Credits </a>
+            <a class = "topMenuButtons1" href="options.html"> Options </a>
+
+        </h3>
+    </div>
+</nav>
+
+
+<div class = "dashboard-border">
+    <aside class="sidebar">
+
+        <nav>
+        <ul>
+            <li> <a class = "sidebarButtons1" href="login.html"> Dashboard </a></li>
+            <li> <a class = "sidebarButtons1" href="login.html"> Business Profile </a></li>
+            <li><a class = "sidebarButtons1" href="login.html"> Assessment </a></li>
+            <li><a class = "sidebarButtons1" href="login.html"> Recommendation </a></li>
+            <li> <a class = "sidebarButtons1" href="login.html"> Archive </a></li>
+        </ul>
+    </nav>
+            
+       </aside>
+<main class = mainsection1>
+    <div class = section1>
+         <p>
+            <h1>
+                SIGN UP
+            </h1>    
+        </p>
+        <p>
+            <h3>
+                Create your account to get started
+            </h3>
+        </p>
+    </div>
+    <div class = section1>
+        <form method = "post">
+
+            <p class = "formGroup">
+                <label for ="firstname"> First Name : </label> <br>
+                <input type ="text" id = "firstname" name = "firstname" required placeholder = "Nacho">
+            </p>
+
+            <p class = "formGroup">
+                <label for ="lastname"> Last Name : </label> <br>
+                <input type ="text" id = "lastname" name = "lastname" required placeholder = "Libre">
+            </p>
+
+            <p class = "formGroup">
+                <label for ="username"> Username : </label> <br>
+                <input type ="text" id = "username" name = "username" required placeholder = "Nacholibre.1124">
+            </p>
+
+            <p class = "formGroup">
+                <label for ="Email">Email : </label> <br>
+                <input type ="Email" id = "Email" name = "Email" required placeholder = "abc@email.com">
+            </p>
+
+
+            <p class = "formGroup">
+                <label for ="password">Password : </label> <br>
+                <input type ="text" id = "password" name = "password" required placeholder = "Atleast 8 characters, include atleast 1 special character">
+            </p>         
+
+            <p class = "formGroup">
+                <button type ="submit" class="btn" > Create Account </button>
+                <button type ="reset" class="btn" > Reset </button>
+            </p>
+
+            <p class = loginOptions>
+                <a href="login.html"> Already have an account? Log In </a>
+            </p>
+
+
+
+        </form>
+    </div>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const firstName = document.getElementById('firstname').value.trim();
+            const lastName = document.getElementById('lastname').value.trim();
+            const username = document.getElementById('username').value.trim();
+            const email = document.getElementById('Email').value.trim();
+            const password = document.getElementById('password').value;
+
+            if (!firstName || !lastName || !username || !email || !password) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            if (password.length < 8 || !/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+                alert('Password must be at least 8 characters long and include at least 1 special character.');
+                return;
+            }
+
+            const userData = {
+                firstName,
+                lastName,
+                username,
+                email,
+                password
+            };
+
+            localStorage.setItem('registeredUser', JSON.stringify(userData));
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('currentUser', username);
+
+            alert('Account created successfully! Redirecting...');
+            window.location.href = 'login.html';
+        });
+    </script>
+</main>
+
+
